@@ -1,13 +1,992 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/dist/output.css" rel="stylesheet">
+	<!-- <link href="/input.css" rel="stylesheet"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline text-red-700">
-    Hello world!
-  </h1>
+
+	<div id="block-1" class="bg-primary block panel min-h-screen h-screen z-15 panel-theme-image phe-04">
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-cover"
+			style="background-image:url(/img/bg-1.jpg)"
+			
+		>
+		</div>
+		<div class="panel_mask bg-black bg-opacity-30"></div>
+		<div class="relative w-full h-full min-h-screen  pt-0 pb-20">
+			<div class="relative flex flex-col w-full h-full justify-end">
+				<div class="panel_header top-0 left-0 right-0 w-full mb-4 fixed z-100 theme-inverse">
+					<div class="container flex justify-between items-center py-3 lg:py-3">
+						<div></div>
+						<div class="sidebar-menu hidden lg:flex flex-1">
+							<div class="main-menu-inner flex items-center gap-x-8 px-5 text-center">
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="/" target="_self"
+											class="relative menu-link link"> <span contenteditable="false" class="text">
+												Главная
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="/biografiya/" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Биография
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="#block-43" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Книги
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="#block-60" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Альбом
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="#block-47" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Интервью
+											</span> </a></div>
+								</div>
+							</div>
+						</div>
+						<div class="flex items-center gap-x-4">
+							<div class="lg:hidden">
+								<div>
+									<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"
+											fill="none" stroke-linecap="round" stroke-linejoin="round"
+											stroke="currentColor" width="24" height="24"
+											class="icon icon-tabler icon-tabler-equal">
+
+
+											<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+											<path d="M5 9h14m-14 6h14"></path>
+										</svg></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="py-6 border-t border-gray-400 lg:hidden theme-dark" style="display:none;">
+						<div class="container">
+							<div class="flex flex-col gap-y-4">
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="/" target="_self"
+											class="relative menu-link link"> <span contenteditable="false" class="text">
+												Главная
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="/biografiya/" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Биография
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="#block-43" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Книги
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="#block-60" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Альбом
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium"><a href="#block-47" target="_self"
+											class="relative menu-link"> <span contenteditable="false" class="text">
+												Интервью
+											</span> </a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="relative mx-auto max-w-full text-center">
+						<div class="mb-4 fs-2 font-medium  block-text">
+							<h1 class="tt-h"><s>Александр Леонидович Мясников</s></h1>
+						</div>
+						<div class="mb-4 fs-4 font-medium mb-3  block-text">
+							<h4 class="tt-h">писатель, журналист, историк, сценарист, автор свыше двадцати книг,
+								посвященных истории, <br>и десятка книг прозы.</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="block-45" class="block panel min-h-screen h-screen panel-theme-light lr-02">
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto"
+			style="background-image:url(/img/map-overview_resize_w2500_h.webp);">
+		</div>
+		<div class="relative !absolute inset-0 z-0 min-h-screen h-screen overflow-hidden  pt-16 pb-16">
+			<div data-bottom-top="transform: scale3d(1.3, 1.3, 1.3); position: absolute;"
+				data-top="transform: scale3d(1, 1, 1); position: absolute;"
+				data-top-bottom="transform: scale3d(1.3, 1.3, 1.3); position: absolute;"
+				class="main-block skrollable skrollable-between" style="transform: scale3d(1.09293, 1.09293, 1.09293); position: absolute; 
+						background-image: url(/img/map-overview_resize_w2500_h.webp);"
+				>
+				<div class="panel_header container mb-10 relative h-full text-center" >
+					<div class="head-text" >
+						<div class="fragment-area direction-ltr theme-light rounded-lg p-8" 
+							>
+							<div class="inner-wrap" >
+								<div class="relative  block-text">
+									<p class="text-right">Считаю себя журналистом, который пророс в
+										писательство. Вся проблема журналистики в том, что многие мечтали бы стать
+										писателями. Но мало кто осмеливался бросить эту профессию, которая затягивает, и
+										заняться написанием чего-то масштабного.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="block-46" class="block panel se-06" ><!---->
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" >
+		</div> <!----> <!----> <!----> <!----> <!----> <!---->
+		<div class="relative block-overflow  pt-16 pb-16" >
+			<div class="lg:py-8"  >
+				<div class="fragment-area direction-ltr back-area top-0 inset-x-0 h-1/2 theme-inverse !absolute"
+					 >
+					<div class="inner-wrap" ></div> <!---->
+				</div>
+				<div class="fragment-area direction-ltr back-area top-1/2 inset-x-0 h-1/2 theme-white"
+					 >
+					<div class="inner-wrap" ></div> <!---->
+				</div>
+				<div class="container" >
+					<div class="lg:grid lg:grid-cols-12" >
+						<div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent"
+							>
+							<div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0"
+								>
+								<div class="relative z-1 top-6 lg:top-0" >
+									<div class="image-wrap decoration-cover-3 rounded-full" 
+										><!----> <!----> 
+										<img src="/img/wr-750_resize_w400_h400.webp" loading="lazy" class="object-cover object-center rounded-full" />										
+										<div style="display:none;" ><!----></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="relative z-1 lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:grid lg:grid-cols-10 lg:items-center theme-2"
+							>
+							<div aria-hidden="true" class="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block"
+								></div>
+							<div class="relative py-12 space-y-6 sm:py-16 px-4 sm:px-6 lg:px-0 lg:col-start-4 lg:col-span-6 text-left"
+								>
+								<div class="mb-4 fs-2 font-medium  block-text js_wysiwyg_d46_t1735980627885_r83"
+									>
+									<p >Дорогие мои читатели</p>
+								</div>
+								<div class="mb-3 fs-4 font-medium mb-3  block-text js_wysiwyg_d46_t1735980627885_r67"
+									>
+									<p >Мне кажется, что говорить о себе «я писатель» все равно, что
+										говорить, что я красивый. Все-таки для людей, занимающихся литературным трудом –
+										прозаиков, поэтов, драматургов - больше подходит слово литератор. Звание
+										писатель надо заслужить. Но это мое мнение.</p>
+								</div> <!----> <!---->
+								<div class="block-button-wrap" data-v-5f9e27db ><a
+										href="/biografiya/" target="_self" class="relative btn "
+										data-v-5f9e27db><!----> <span contenteditable="false" class="text"
+											data-v-5f9e27db>
+											Моя биография
+										</span> <!----></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!----> <!---->
+	</div>
+
+	<div id="block-43" class="block panel panel-theme-light ca-05"><!---->
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto"></div>
+		<!----> <!----> <!----> <!----> <!----> <!---->
+		<div class="relative pt-16 pb-16">
+			<div data-fetch-key="1">
+				<div class="panel_filters">
+					<div value="" class="container mb-4">
+						<div class="mx-auto max-w-full"><!----> <!----></div>
+					</div>
+				</div>
+				<div>
+					<div class="panel_header mb-10">
+						<div class="container">
+							<div class="mx-auto max-w-full text-left">
+								<div class="mb-4 fs-2 font-medium  block-text js_wysiwyg_d43_t1735980627888_r27"
+									data-v-4e89a358="">
+									<p class="tt-p"><s>Книги</s></p>
+								</div>
+								<div contenteditable="false"
+									class="min-width-10 min-height-10 block fs-4 font-medium mb-3  block-text"
+									data-v-5c478f96="">
+									Общий тираж книг около 1 миллиона экземпляров.
+								</div> <!---->
+								<div class="fs-5 mt-2  block-text js_wysiwyg_d43_t1735980627889_r36" data-v-4e89a358="">
+									<p class="tt-p">Писатель, историк, журналист, главный редактор проекта «Россия - моя
+										история» Александр Мясников 12 марта отмечает 70-летие. Он - автор более 40 книг.
+										Среди них проза, путеводители, книги по истории, общий тираж – свыше 1 млн
+										экземпляров. Обладатель государственной премии Правительства РФ в области культуры,
+										член Союза писателей России. В интервью ТАСС Мясников рассказал, как была создана
+										Украина, чему научил его Валентин Пикуль, какую кухню предпочитала Екатерина II и
+										какими будут россияне после СВО.</p>
+									<p class="tt-p">Александр Мясников – автор книг, которые хранятся не только во всех
+										крупных библиотеках мира, но в собраниях королевских семей, президентов, премьеров и
+										других первых лиц многих государств. Первым монаршим обладателем книги стала
+										английская королева Елизавета, которой была вручена книга во время ее визита в
+										Петербург в 1994 году</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel_body">
+						<div class="container">
+							<div class="mx-auto max-w-full">
+								<div class="cards-holder-non-grid">
+									<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 cell-location-2-4">
+										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> 
+															<img
+																src="/img/bg-1.jpg"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2022
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-4484-3914-8
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%A1%D0%A1%D0%A1%D0%A0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"><!----> <!----> 
+															<img
+																src="/img/book-1.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2012
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-9533-6444-7
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D1%82%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%BA%D0%B0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> 
+															<img
+																src="/img/book-2.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2013
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-4444-0490-4
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D1%82%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D1%8B+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> 
+															<img
+																src="/img/book-1.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2014
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-4444-2460-5
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8.+%D0%97%D0%B0%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F+%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> <img
+																src="/img/book-2.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2021
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-4484-2697-1
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D1%80%D0%B5%D0%BB%D0%B8%D0%B3%D0%B8%D0%B9+%D0%BC%D0%B8%D1%80%D0%B0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> <img
+																src="/img/book-1.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2014
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-7580-0048-9
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%9F%D1%80%D0%BE+%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9+%D0%B3%D0%BE%D0%B4+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
+												>
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> <img
+																src="/img/book-2.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2011
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-9533-6045-6
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+100+%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85+%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9+%D1%81%D0%B0%D0%BD%D0%BA%D1%82-%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto">
+												<div class="card-wrapper flex flex-col" >
+													<div class="card-image" >
+														<div class="panel_mask gradient"
+															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
+															></div>
+														<div class="image-wrap float-center bg-theme-default"
+															><!----> <!----> <img
+																src="/img/book-2.webp"
+																loading="eager"
+																class="absolute z-n1 object-cover h-full w-full"
+																> <!----> <!---->
+															<div style="display:none;" ><!----></div>
+														</div>
+													</div>
+													<div class="card-body flex-1" >
+														<div class="tag-btn-set flex flex-wrap gap-3 mb-8 mt-1"
+															>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		2012
+																	</span> <!----></a></div>
+															<div class="block-button-wrap" 
+																><a target="_self"
+																	class="relative btn btn-sm " ><!---->
+																	<span contenteditable="false" class="text"
+																		>
+																		978-5-9533-6097-5
+																	</span> <!----></a></div>
+														</div> <!----> <!----> <!---->
+													</div>
+													<div class="card-footer mx-4 py-4 border-t" >
+														<div class="flex justify-between items-center" >
+															<div class="block-button-wrap" 
+																><a
+																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+100+%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85+%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D1%8B+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
+																	target="_blank" class="relative btn  btn-primary"
+																	><!----> <span contenteditable="false"
+																		class="text" >
+																		Поиск
+																	</span> <!----></a></div>
+															<div class="icon-box" ><!----> <!----> <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div> <!----> <!---->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center mt-4">
+						<div class="block-button-wrap" ><a target="_blank"
+								class="relative btn btn-primary" ><!----> <span contenteditable="false"
+									class="text" >
+									Показать еще
+								</span> <!----></a></div>
+					</div> <!----> <!----> <!---->
+				</div>
+			</div>
+		</div> <!----> <!---->
+	</div>
+
+	<div id="block-47" class="block panel panel-theme-inverse fe-03" ><!---->
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" ></div>
+		<!----> <!----> <!----> <!----> <!----> <!---->
+		<div class="relative pt-16 pb-16" >
+			<div class="container" >
+				<div class="mx-auto max-w-full">
+					<div class="xl:grid xl:grid-cols-3 xl:gap-x-8">
+						<div class="xl:col-span-1 text-center">
+							<div class="top-8 mb-10 sticky">
+								<div class="fs-4 font-medium mb-3  block-text js_wysiwyg_d47_t1735980627908_r47"
+									data-v-4e89a358="">
+									<p class="tt-p"><s>Интервью</s></p>
+								</div> <!---->
+								<div class="mt-4 fs-5 text-secondary  block-text js_wysiwyg_d47_t1735980627908_r31"
+									data-v-4e89a358="">
+									<p class="tt-p">если вы хотите чего-либо достигнуть, а в этом смысл всех дел и деяний,
+										то важнейшим является воля. Сегодня об этом забывают. Или заставляют забыть,
+										подменяя многие естественные понятия какими-то поведенческими формулами. А ведь за
+										этими формулами-штампами человек теряет индивидуальность и волю.</p>
+									<p class="tt-p"><br></p>
+								</div>
+								<div class="panel_footer mt-8 text-center">
+									<div class="inline-flex gap-2">
+										<div class="block-button-wrap" style="display:none;" data-v-5f9e27db=""><!---->
+										</div>
+										<div class="block-button-wrap" style="display:none;" data-v-5f9e27db=""><!---->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="xl:col-span-2">
+							<div class="grid gap-4 md:grid-cols-1 xl:grid-cols-1">
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-5">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627910_r74"
+														data-v-4e89a358="">
+														<p class="tt-p">ТАСС,&nbsp; 12 марта 2023</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627910_r94"
+														data-v-4e89a358="">
+														<p class="tt-p"><a rel="noopener noreferrer nofollow"
+																href="https://harnas.clients.chimera.ink/article/pisatel-aleksandr-myasnikov-budet-novoe-vremya-i-budut-novye-lyudi/">Писатель
+																Александр Мясников: будет новое время, и будут новые
+																люди</a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627911_r88"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;01 сентября 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627911_r59"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/aleksandr-myasnikov-esli-gosudarstvo-ne-budet-zanimatsya-vospitaniem-detej-to-vsyo-ostalnoe-bessmyslenno/">Александр
+																Мясников: Если государство не будет заниматься воспитанием
+																детей, то всё остальное бессмысленно.</a> </p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627911_r42"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;30 декабря 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627912_r43"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/aleksandr-myasnikov-udivitelno-pochemu-ne-bylo-prazdnika-sozdaniya-sssr/">Александр
+																Мясников: «Удивительно, почему не было праздника создания
+																СССР»<strong>. </strong></a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627913_r87"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;26 ноября 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627913_r70"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/aleksandr-myasnikov-volga-takoe-mesto-gde-mozhno-puteshestvovat-ne-tolko-v-prostranstve-no-i-vo-vremeni/">Александр
+																Мясников: Волга - такое место, где можно путешествовать не
+																только в пространстве, но и во времени </a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627914_r21"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;12 октября 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627914_r75"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/aleksandr-myasnikov-namnogo-vazhnee-vospitanie-gosudarstvennosti-a-eto-ponyatie-svyazano-s-istoriej-gosudarstva-kak-takovogo/">Александр
+																Мясников: Намного важнее воспитание государственности, а это
+																понятие связано с историей государства как такового </a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627915_r73"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;22 июня 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627915_r20"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/aleksandr-myasnikov-dvulichie-nashih-tak-nazyvaemyh-partnyorov-sovershenno-uzhasno/">Александр
+																Мясников: Двуличие наших так называемых «партнёров»
+																совершенно ужасно</a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627916_r40"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;26 сентября 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627916_r83"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/aleksandr-myasnikov-nashu-stranu-uvazhali-tolko-togda-kogda-my-stanovilis-silnymi-i-nezavisimymi/">Нашу
+																страну уважали только тогда, когда мы становились сильными и
+																независимыми </a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627916_r32"
+														data-v-4e89a358="">
+														<p class="tt-p">ОРТ,&nbsp;09 мая 2022</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627917_r42"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/kogda-prichina-prazdnika-ponyatna-bez-obuyasnenij-on-ne-ischeznet/">Когда
+																причина праздника понятна без объяснений, он не исчезнет</a>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div>
+								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+									<div class="relative card h-full border Card4">
+										<div class="p-4 theme-light">
+											<div class="flex gap-x-4">
+												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
+													<!----> <!---->
+													<div class="ic ic-video1" data-v-7d6c7952=""></div>
+													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												</div>
+												<div class="flex flex-col">
+													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627917_r10"
+														data-v-4e89a358="">
+														<p class="tt-p">СОЮЗ,&nbsp; 6 мая 2018</p>
+													</div>
+													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627917_r72"
+														data-v-4e89a358="">
+														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+																href="/article/cerkov-i-obshestvo-beseda-s-pisatelem-istorikom-al-myasnikovym/">Церковь
+																и общество. Беседа с писателем, историком А.Л. Мясниковым.
+															</a></p>
+													</div>
+												</div>
+											</div>
+										</div> <!---->
+									</div>
+								</div> <!----> <!---->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!----> <!---->
+	</div>
+
+
+  
+
+  
+
+
 </body>
+
+
+
 </html>
