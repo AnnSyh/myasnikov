@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/dist/output.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@latest/dist/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@latest/dist/fancybox.css" />
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script src="./index.js"></script>
+
+</head>
+
+<body>
+
+	<div id="block-8" class="block panel min-h-screen h-screen z-15 panel-theme-image phe-04" >
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-cover"
+			style="background-image:url(/img/csm-myasnikov-1-477e970ccf_resize_w2500_h.webp);"
+			>
+		</div>  
+		<div class="panel_mask bg-black bg-opacity-50"></div>
+		<div class="relative w-full h-full min-h-screen  pt-0 pb-0" >
+			<div class="relative flex flex-col w-full h-full justify-center" >
+				<div class="panel_header top-0 left-0 right-0 w-full mb-4 fixed z-100 theme-inverse">
+					<div class="container flex justify-between items-center py-3 lg:py-3">
+						<div></div>
+						<div class="sidebar-menu hidden lg:flex flex-1">
+							<div class="main-menu-inner flex items-center gap-x-8 px-5 text-center">
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Главная
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/biografiya.html"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Биография
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/index.html#block-43"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Книги
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/index.html#block-60"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Альбом
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/index.html#block-47"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Интервью
+											</span> </a></div>
+								</div>  
+							</div>
+						</div>
+
+						<div class="flex items-center gap-x-4" onclick="toggleDropdown()">
+							<div class="lg:hidden">
+								<div>
+									<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"
+											fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+											width="24" height="24" class="icon icon-tabler icon-tabler-equal">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+											<path d="M5 9h14m-14 6h14"></path>
+										</svg></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div id="myDropdown" class="dropdown-content py-6 border-t border-gray-400 lg:hidden theme-dark" style="display:none;"> -->
+					<div id="myDropdown" class="dropdown-content" >
+						<div class="container">
+							<div class="flex flex-col gap-y-4">
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Главная
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/biografiya.html"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Биография
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/index.html#block-43"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Книги
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/index.html#block-60"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Альбом
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap font-medium" ><a href="/src/index.html#block-47"
+											target="_self" class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Интервью
+											</span> </a></div>
+								</div>  
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="relative mx-auto max-w-full text-center">
+						<div class="mb-4 fs-2 font-medium  block-text js_wysiwyg_d8_t1736017884823_r91" >
+							<p ><s>Биография</s></p>
+						</div>
+						<div class="mb-4 fs-4 font-medium  block-text js_wysiwyg_d8_t1736017884824_r55"
+							>
+							<h4 >Он родился в обычной советской семье: отец был техником-инженером на заводе,
+								мать <br>также работала на производстве.</h4>
+							<h4 >В общем жили, как все.</h4>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+<div id="block-7" class="block panel min-h-screen h-screen panel-theme-light lr-02" >
+	<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto"
+		style="background-image:url(/img/map-overview_resize_w2500_h.webp);"
+		></div>      
+	<div class="relative !absolute inset-0 z-0 min-h-screen h-screen overflow-hidden  pt-4 pb-4" >
+		<!-- data-aos="zoom-in" data-aos-easing="ease-in-out" -->
+		<div 
+		    data-bottom-top="transform: scale3d(1.3, 1.3, 1.3); position: absolute;" 
+		    data-top="transform: scale3d(1, 1, 1); position: absolute;" 
+		    data-top-bottom="transform: scale3d(1.3, 1.3, 1.3); position: absolute;" 
+		    class="main-block" 
+		    style="transform:scale3d(1, 1, 1);position:absolute;
+		    background-image:url(/img/map-overview_resize_w2500_h.webp);"
+			 >
+			<div class="panel_header container mb-10 relative h-full text-right" >
+				<div class="head-text" >
+					<div class="fragment-area direction-ltr theme-light rounded-xl p-8" 
+						>
+						<div class="inner-wrap" >
+							<div class="relative  block-text js_wysiwyg_d7_t1736017884825_r69" >
+								<h5 class="tt-h">В своей автобиографической книге «<a target="_blank"
+										rel="noopener noreferrer nofollow" href="http://Жизнь.ru">Жизнь.ru</a>, или в
+									пространстве русского пейзажа» он написал: «Жизнь до совершеннолетия складывалась
+									без особых отклонений от традиционных анкетных пунктов». И это так. Поэтому, после
+									школы была служба в армии, затем — учёба в университете. Александр Мясников по
+									образованию филолог: в 1978 году закончил филологический факультет (английское
+									отделение) Ленинградского государственного университета.</h5>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>  
+</div>
+
+<div id="block-4" class="block panel panel-theme-light lr-03" >
+	<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" ></div>
+	     
+	<div class="relative pt-16 pb-16" >
+		<div class="container mx-auto lg:max-w-2xl xl:max-w-5xl"  >
+			<div class="panel_header mb-10 max-w-full text-left" >
+				<div class="mb-4 title fs-2 font-medium  block-text js_wysiwyg_d4_t1736017884827_r3" >
+					<h4 class="tt-h"><strong>11 декабря сего года Александр Мясников стал лауреатом Международной премии
+							«Terra Incognita», которая торжественно была ему вручена в Дипломатической академии
+							Министерства иностранных дел России.</strong></h4>
+				</div>
+			</div>
+			<div class="panel_body" > 
+				<div class="article-content max-w-full text-left" >
+					<div class="block-text js_wysiwyg_d4_t1736017884827_r25" >
+						<p class="tt-p">Уже во время учёбы в университете получил первый опыт в журналистике – писал
+							статьи для главной городской газеты – «Ленинградской правды» (ныне «Санкт-Петербургские
+							ведомости»).<br>После окончания университета несколько лет работал корреспондентом в газете
+							«Вечерний Ленинград», сотрудничал с рядом всесоюзных периодических изданий («Советская
+							культура» и др.). В те же годы писал сценарии для студии научно-популярных фильмов
+							«Леннаучфильм». Фильм «Монолог о сущности машин», снятый по его сценарию режиссёром
+							Александром Сидельниковым, выдвигался на высшую номинацию – государственную премию.</p>
+					</div>
+				</div>
+				<div class="flow-root mt-6" >
+					<div class="mb-4 md:mb-0 md:float-right md:ml-6" >
+						<div class="image-wrap"  >  
+							<img
+								src="/img/photo-2023-03-09-19-05-29_resize_w400_h225.webp"
+								loading="lazy"  class="">  
+							<div style="display:none;" ></div>
+						</div> 
+					</div>
+					<div class="article-content max-w-full text-left" >
+						<div class="block-text js_wysiwyg_d4_t1736017884828_r84" >
+							<p class="tt-p">Затем Александр Мясников был редактором в крупнейшем издательстве «Советский
+								писатель». Потом – главным редактором художественного вещания во всероссийской
+								телекомпании «Петербург – 5 канал». Оставил должность редактора и сотрудничал с
+								телевидением как автор. Был ведущим нескольких телевизионных проектов, в том числе
+								программ, посвященных истории языка. Несколько лет выходил в прямой эфир со своей
+								рубрикой «Алхимия времени» в ежедневной популярной утренней телевизионной программе. Был
+								автором и ведущим программы «Автограф времени», посвященной российской истории.</p>
+							<p class="tt-p">Прозаические произведения начал писать в начале 1980-х годов, ещё работая в
+								газете.<br>Его первая повесть и рассказы появились в сборнике молодых прозаиков
+								«Причал». Сборник вышел в свет в 1987 году в издательстве «Советский писатель». Критик
+								Владимир Акимов отмечал в предисловии: «А. Мясников чувствует слово, особенно речевое.
+								Но порой ещё не вполне доверяет этому чувству слова. И самое привлекательное – у
+								молодого писателя нет страха перед «психологией», которую он передаёт современно: не в
+								нудном самокопании героев, а через сюжет, событие, через психологизированный пейзаж и
+								внешнее поведение». Правда, газета «Смена», споря и с В. Акимовым, и с утверждением
+								издательства о том, что «герои произведений молодых писателей занимают активную
+								жизненную позицию, стремясь найти своё место в жизни», писала, что герои М., не отвечают
+								требованиям современности, не борются за идеалы перестройки, а он сам «прикован ржавыми
+								цепями к периоду застоя».<br>В 1988 году два рассказа были опубликованы в сборнике прозы
+								«Молодой Ленинград».</p>
+							<p class="tt-p">В 1990 году в издательстве «Советский писатель» вышла первая книга Мясникова
+								– «Полдень на острове робинзонов». В неё вошли три повести («Дым от костра», «Полдень на
+								острове робинзонов», «Южнее мыса Доброй Надежды») и несколько рассказов. Ни эту, ни
+								следующие книги («Полуночный остров», СПб., 1993, «Интербург», М., 1996, «Фуга на
+								острове грёз» М., 1996) критика словно и не заметила. Публикации о книгах ограничивались
+								лишь формальным перечислением вышедших в свет новинок. К московскому изданию 1997 года –
+								сборнику повестей и рассказов «Цветная жизнь» – предисловие написал критик М. Б.
+								Коносов. Он назвал предисловие «Инстинкт самосохранения», в котором очень точно заметил:
+								«Проза Мясникова неизменно поражает магией слова. Пересказать невозможно. Изменить
+								нельзя. Можно только читать и слушать. Восприятие реальности для него всегда чувственно,
+								пластично, часто графично. Вкус, осязание, слух – это то, с чего всё начинается. И через
+								слух, шум города, реки, леса рождается ощущение, понимание. Мясников утверждается в
+								нашей литературе без крика, без световых эффектов». И в этом критик оказался прав: выход
+								книг Александр Мясников не сопровождали пышные презентации и прочие рекламные акции.
+								Хотя за книгу «Властители Отчества» в 2015 году был удостоен Всероссийской
+								литературно-исторический премии имени Александра Невского.</p>
+							<p class="tt-p">Александр Мясников – автор книг, которые хранятся не только во всех крупных
+								библиотеках мира, но в собраниях королевских семей, президентов, премьеров и других
+								первых лиц многих государств. Первым монаршим обладателем книги стала английская
+								королева Елизавета, которой была вручена книга во время ее визита в Петербург в 1994
+								году.<br>Публиковался за рубежом, в том числе в британском журнале «Logos», австрийском
+								сборнике, посвященном литературе ХХ века.<br>Общий тираж книг около 1 миллиона
+								экземпляров.</p>
+							<p class="tt-p">В 1997 году Александр Мясников впервые обращается к истории. И с того
+								времени именно русская история становится одним из ключевых направлений его литературной
+								деятельности. Есть некоторая символичность в том, что первой книгой была «Москва.
+								История города» (СПб., 1997). На следующий год вышла в свет книга «Санкт-Петербург.
+								История города», затем – «Золотое кольцо России. История городов», «Виват, Россия!».</p>
+							<p class="tt-p">Своеобразными вехами в освоении исторической темы стали объёмистые тома:
+								«Российская летопись» (СПб. 2001) и «Хроника человечества: Россия» (М., 2002). После
+								выхода в свет этих трудов, казалось бы, вопрос с освоением и осмыслением пространства
+								российской истории должен был потерять для Александра Мясникова актуальность. Однако
+								через несколько лет выходит в свет «Летописный календарь России» (СПб., 2004) и
+								замечательная, на мой взгляд, книга «История Российского государства» (СПб.,
+								2008).<br>Александру Мясникову не чуден жанр путеводителей. В 2009 году крупнейшее
+								московское издательство «АСТ» выпускают в свет путеводитель «Весь Петербург», затем –
+								путеводитель по Валааму, написанный с большой любовью к русскому северу.</p>
+							<p class="tt-p">Путеводитель по Петербургу Александр Мясников строит довольно неожиданно,
+								отказываясь от описания традиционных туристических маршрутов. Географическими точками
+								опоры стали острова, на которых расположен город. Это позволяло читателю более полно и
+								точно осмыслить городское пространство, остановить внимание на «автографах времени»,
+								которыми с избытком отмечены все петербургские острова.</p>
+							<p class="tt-p">Но в 2011 году Мясников выносит на суд читателей произведение совершенно
+								неожиданного и нового жанра: «Путеводитель по русской истории». В течение пяти лет
+								выходят в свет шесть томов. «Путеводитель» уникален не только подачей истории, но и
+								внутренним построением текстового материала. Не зря пресса живо откликнулась на
+								появление этих книг.<br>Следующим неординарным проектом стала серия книг, объединённых
+								так называемым «тайным кодом», то есть есть приёмом, который позволяет по-новому
+								взглянуть на многие привычные события, понятия, факты. Это «Тайный код Петербурга»,
+								«Тайный код Москвы», «Тайный код России», «Тайный код российской истории», «Тайный код
+								русских праздников».<br>Но занимаясь историей, он не забывал и художественную прозу.</p>
+							<p class="tt-p">Особняком в его творчестве стоит роман «Принцип росомахи» (М.,1999).
+								Мясников обращается к казалось бы не свойственному ему жанру – детективу, хотя сам
+								обозначает жанр произведения как «экстремальная проза». Детектив здесь используется как
+								традиционный приём для раскрытия и осмысления скандальных историй 90-х годов ХХ века,
+								связанных с российскими изотопами и, так называемой, красной ртутью.</p>
+							<p class="tt-p">Отдал писатель дань и научно-популярной литературе.<br>Начиная с 2012 года
+								Мясников осваивает совершенно новый вид деятельности – выставочную. Он принимает самое
+								активное участие в создании выставки «Романовы», которая открылась в 2013 году в
+								центральном Манеже в Москве. На следующий год была выставка «Рюриковичи», которая, как и
+								предыдущая, была приурочена к Дню народного единства – 4 ноября. Затем были выставки,
+								посвященные ХХ веку.<br>На основе этих выставок в Москве, на территории ВДНХ, был создан
+								Исторический парк «Россия – моя история». В 2017 году началась работа по созданию
+								филиалов Исторического парка во всех регионах России. Александр Мясников является
+								главным редактором этого грандиозного проекта. К 2019 году в России уже работает 19
+								таких парков, в том числе и Санкт-Петербурге.<br>В 2017 году Александр Мясников был
+								удостоен премии Правительства России в области культуры.</p>
+							<p class="tt-p">В начале 2018 года Александр Мясников получает предложение участвовать в
+								грандиозном музыкально-просветительском проекте «Музыка российской государственности»,
+								проект реализуется на средства гранта Президента Российской Федерации, проект
+								осуществлён Международным музыкальным фестивалем «Дворцы Санкт-Петербурга»,
+								художественным руководителем которого является заслуженная артистка России, музыкант
+								Мария Сафарьянц.</p>
+							<p class="tt-p">На протяжение всего 2018 года на площадке Колонного зала Президентской
+								библиотеки звучала музыка российской государственности, сопровождаемая историческими
+								рассказами в авторской обработке Александра Мясникова.</p>
+							<p class="tt-p">Осенью 2018 года Александр Мясников принял участие в еще одном, на мой
+								взгляд уникальном музыкально-просветительском проекте, опять же на средства гранта
+								Президента Российской Федерации и реализованном Международным музыкальным фестивалем
+								«Дворцы Санкт-Петербурга» (художественный руководитель – Мария Сафарьянц). В рамках
+								проекта «Дворцы Крыма-Дворцы-Санкт-Петербурга» Алексанр Мясников позволил благодарной
+								публики взглянуть на исторический события, которые развивались в прекраснейших
+								императорских дворцах Крыма, приоткрывая историю государственности России.</p>
+							<p class="tt-p"><em>11 декабря сего года Александр Мясников стал лауреатом Международной
+									премии «Terra Incognita», которая торжественно была ему вручена в Дипломатической
+									академии Министерства иностранных дел России. Данная премия присуждается за
+									литературные произведения, гуманитарные исследования, достижения в сфере искусства и
+									культуры как гражданам России, так и гражданам других стран. Он удостоен этой
+									высокой наградыне только за литературные труды, но и за неустанную деятельность по
+									популяризации истории России.</em></p>
+							<p class="tt-p">Для нас является важным, что историк-писатель Александр Мясников вносит свой
+								скромный вклад в возрождение России, её величия, участвуя в различных просветительских
+								проектах. И наградой Александру Мясникову служит признание наших соотечественников, всех
+								тех людей, коим не безразлично будущее российской государственности, созидание на благо
+								нашей родины.<br>Хочется пожелать Александру Мясникову новых творческих успехов,
+								здоровья и всего доброго, всего того, что мы обычно желаем своим близким.</p>
+							<p class="tt-p"><strong>Геннадий Коломенский,&nbsp;</strong><br><strong>соб. корр.
+									информагентства «Северная Звезда»</strong></p>
+							<p class="tt-p">Источник: <a target="_blank" rel="noopener noreferrer nofollow"
+									href="https://nstar-spb.ru">https://nstar-spb.ru</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>  
+</div>
+
+
+
+
+
+
+	<div id="block-56" class="block panel panel-theme-inverse pft-01" >
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" ></div>
+		     
+		<div class="relative pt-8 pb-8" >
+			<div class="container" >
+				<section class="relative">
+					<div class="mx-auto max-w-full">
+						<div class="text-center">
+							<div class="sidebar-menu inline-flex flex-wrap gap-x-8 justify-center">
+								<div class="repeater-list-item">
+									<div class="block-button-wrap active" ><a href="/src/" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Главная
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/biografiya.html" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Биография
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/index.html#block-43" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Книги
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/index.html#block-60" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Альбом
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/index.html#block-47" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Интервью
+											</span> </a></div>
+								</div>  
+							</div>
+							<div class="flex   m-0 box-border text-lg gap-x-4 leading-4 mb-6 justify-center"> 
+								 </div>
+							<div class="copyright-year flex fs-5 items-end m-0 box-border mb-3 justify-center">
+								© &nbsp;
+								<div class="fs-5 text-secondary  block-text js_wysiwyg_d56_t1736014654399_r90"
+									>
+									<p >Александр Мясников</p>
+								</div>
+							</div>
+							<div class="copyright text-secondary justify-center">
+								© работает на движке <a href="https://www.chimera.ink/" target="_blank">chimera.ink</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>  
+	</div>
+
+</body>
+
+
+
+
+</html>

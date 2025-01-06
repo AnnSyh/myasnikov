@@ -5,10 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/dist/output.css" rel="stylesheet">
-	<!-- <link href="/input.css" rel="stylesheet"> -->
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@latest/dist/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@latest/dist/fancybox.css" />
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
+	<script src="./index.js"></script>
+
 </head>
 
 <body>
@@ -28,38 +38,38 @@
 						<div class="sidebar-menu hidden lg:flex flex-1">
 							<div class="main-menu-inner flex items-center gap-x-8 px-5 text-center">
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="/" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/" target="_self"
 											class="relative menu-link link"> <span contenteditable="false" class="text">
 												Главная
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="/biografiya/" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/biografiya.html" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Биография
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="#block-43" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/index.html#block-43" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Книги
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="#block-60" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/index.html#block-60" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Альбом
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="#block-47" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/index.html#block-47" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Интервью
 											</span> </a></div>
 								</div>
 							</div>
 						</div>
-						<div class="flex items-center gap-x-4">
+						<div class="flex items-center gap-x-4 toggle-btn" onclick="toggleDropdown()">
 							<div class="lg:hidden">
 								<div>
 									<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"
@@ -75,35 +85,35 @@
 							</div>
 						</div>
 					</div>
-					<div class="py-6 border-t border-gray-400 lg:hidden theme-dark" style="display:none;">
+					<div id="myDropdown" class="dropdown-content">
 						<div class="container">
 							<div class="flex flex-col gap-y-4">
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="/" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/" target="_self"
 											class="relative menu-link link"> <span contenteditable="false" class="text">
 												Главная
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="/biografiya/" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/biografiya.html" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Биография
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="#block-43" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/index.html#block-43" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Книги
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="#block-60" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/index.html#block-60" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Альбом
 											</span> </a></div>
 								</div>
 								<div class="repeater-list-item">
-									<div class="block-button-wrap font-medium"><a href="#block-47" target="_self"
+									<div class="block-button-wrap font-medium"><a href="/src/index.html#block-47" target="_self"
 											class="relative menu-link"> <span contenteditable="false" class="text">
 												Интервью
 											</span> </a></div>
@@ -135,7 +145,8 @@
 			<div data-bottom-top="transform: scale3d(1.3, 1.3, 1.3); position: absolute;"
 				data-top="transform: scale3d(1, 1, 1); position: absolute;"
 				data-top-bottom="transform: scale3d(1.3, 1.3, 1.3); position: absolute;"
-				class="main-block skrollable skrollable-between" style="transform: scale3d(1.09293, 1.09293, 1.09293); position: absolute; 
+				class="main-block skrollable skrollable-between" 
+				style="transform: scale3d(1.09293, 1.09293, 1.09293); position: absolute; 
 						background-image: url(/img/map-overview_resize_w2500_h.webp);"
 				>
 				<div class="panel_header container mb-10 relative h-full text-center" >
@@ -157,18 +168,18 @@
 		</div>
 	</div>
 
-	<div id="block-46" class="block panel se-06" ><!---->
+	<div id="block-46" class="block panel se-06" >
 		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" >
-		</div> <!----> <!----> <!----> <!----> <!----> <!---->
+		</div>   
 		<div class="relative block-overflow  pt-16 pb-16" >
 			<div class="lg:py-8"  >
 				<div class="fragment-area direction-ltr back-area top-0 inset-x-0 h-1/2 theme-inverse !absolute"
 					 >
-					<div class="inner-wrap" ></div> <!---->
+					<div class="inner-wrap" ></div> 
 				</div>
 				<div class="fragment-area direction-ltr back-area top-1/2 inset-x-0 h-1/2 theme-white"
 					 >
-					<div class="inner-wrap" ></div> <!---->
+					<div class="inner-wrap" ></div> 
 				</div>
 				<div class="container" >
 					<div class="lg:grid lg:grid-cols-12" >
@@ -178,16 +189,16 @@
 								>
 								<div class="relative z-1 top-6 lg:top-0" >
 									<div class="image-wrap decoration-cover-3 rounded-full" 
-										><!----> <!----> 
+										> 
 										<img src="/img/wr-750_resize_w400_h400.webp" loading="lazy" class="object-cover object-center rounded-full" />										
-										<div style="display:none;" ><!----></div>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="relative z-1 lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:grid lg:grid-cols-10 lg:items-center theme-2"
 							>
-							<div aria-hidden="true" class="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block"
+							<div  class="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block"
 								></div>
 							<div class="relative py-12 space-y-6 sm:py-16 px-4 sm:px-6 lg:px-0 lg:col-start-4 lg:col-span-6 text-left"
 								>
@@ -201,29 +212,29 @@
 										говорить, что я красивый. Все-таки для людей, занимающихся литературным трудом –
 										прозаиков, поэтов, драматургов - больше подходит слово литератор. Звание
 										писатель надо заслужить. Но это мое мнение.</p>
-								</div> <!----> <!---->
-								<div class="block-button-wrap" data-v-5f9e27db ><a
-										href="/biografiya/" target="_self" class="relative btn "
-										data-v-5f9e27db><!----> <span contenteditable="false" class="text"
-											data-v-5f9e27db>
+								</div> 
+								<div class="block-button-wrap"  ><a
+										href="/src/biografiya.html" target="_self" class="relative btn "
+										> <span contenteditable="false" class="text"
+											>
 											Моя биография
-										</span> <!----></a></div>
+										</span> </a></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div> <!----> <!---->
+		</div> 
 	</div>
 
-	<div id="block-43" class="block panel panel-theme-light ca-05"><!---->
+	<div id="block-43" class="block panel panel-theme-light ca-05">
 		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto"></div>
-		<!----> <!----> <!----> <!----> <!----> <!---->
+		  
 		<div class="relative pt-16 pb-16">
 			<div data-fetch-key="1">
 				<div class="panel_filters">
 					<div value="" class="container mb-4">
-						<div class="mx-auto max-w-full"><!----> <!----></div>
+						<div class="mx-auto max-w-full"></div>
 					</div>
 				</div>
 				<div>
@@ -231,23 +242,23 @@
 						<div class="container">
 							<div class="mx-auto max-w-full text-left">
 								<div class="mb-4 fs-2 font-medium  block-text js_wysiwyg_d43_t1735980627888_r27"
-									data-v-4e89a358="">
-									<p class="tt-p"><s>Книги</s></p>
+									>
+									<p ><s>Книги</s></p>
 								</div>
 								<div contenteditable="false"
 									class="min-width-10 min-height-10 block fs-4 font-medium mb-3  block-text"
-									data-v-5c478f96="">
+									>
 									Общий тираж книг около 1 миллиона экземпляров.
-								</div> <!---->
-								<div class="fs-5 mt-2  block-text js_wysiwyg_d43_t1735980627889_r36" data-v-4e89a358="">
-									<p class="tt-p">Писатель, историк, журналист, главный редактор проекта «Россия - моя
+								</div> 
+								<div class="fs-5 mt-2  block-text js_wysiwyg_d43_t1735980627889_r36" >
+									<p >Писатель, историк, журналист, главный редактор проекта «Россия - моя
 										история» Александр Мясников 12 марта отмечает 70-летие. Он - автор более 40 книг.
 										Среди них проза, путеводители, книги по истории, общий тираж – свыше 1 млн
 										экземпляров. Обладатель государственной премии Правительства РФ в области культуры,
 										член Союза писателей России. В интервью ТАСС Мясников рассказал, как была создана
 										Украина, чему научил его Валентин Пикуль, какую кухню предпочитала Екатерина II и
 										какими будут россияне после СВО.</p>
-									<p class="tt-p">Александр Мясников – автор книг, которые хранятся не только во всех
+									<p >Александр Мясников – автор книг, которые хранятся не только во всех
 										крупных библиотеках мира, но в собраниях королевских семей, президентов, премьеров и
 										других первых лиц многих государств. Первым монаршим обладателем книги стала
 										английская королева Елизавета, которой была вручена книга во время ее визита в
@@ -261,7 +272,7 @@
 							<div class="mx-auto max-w-full">
 								<div class="cards-holder-non-grid">
 									<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 cell-location-2-4">
-										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+										<div data-aos="fade-up" class="repeater-list-item">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -270,13 +281,13 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> 
+															> 
 															<img
 																src="/img/bg-1.jpg"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -284,19 +295,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2022
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-4484-3914-8
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -304,18 +315,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%A1%D0%A1%D0%A1%D0%A0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+										<div data-aos="fade-up" class="repeater-list-item">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -323,13 +334,13 @@
 														<div class="panel_mask gradient"
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
-														<div class="image-wrap float-center bg-theme-default"><!----> <!----> 
+														<div class="image-wrap float-center bg-theme-default"> 
 															<img
 																src="/img/book-1.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -337,19 +348,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2012
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-9533-6444-7
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -357,18 +368,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D1%82%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%BA%D0%B0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+										<div data-aos="fade-up" class="repeater-list-item">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -377,13 +388,13 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> 
+															> 
 															<img
 																src="/img/book-2.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -391,19 +402,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2013
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-4444-0490-4
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -411,18 +422,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D1%82%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D1%8B+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init aos-animate"><!---->
+										<div data-aos="fade-up" class="repeater-list-item">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -431,13 +442,13 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> 
+															> 
 															<img
 																src="/img/book-1.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -445,19 +456,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2014
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-4444-2460-5
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -465,18 +476,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8.+%D0%97%D0%B0%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F+%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+										<div data-aos="fade-up" class="repeater-list-item ">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -485,12 +496,12 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> <img
+															> <img
 																src="/img/book-2.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -498,19 +509,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2021
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-4484-2697-1
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -518,18 +529,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B4+%D1%80%D0%B5%D0%BB%D0%B8%D0%B3%D0%B8%D0%B9+%D0%BC%D0%B8%D1%80%D0%B0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+										<div data-aos="fade-up" class="repeater-list-item ">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -538,12 +549,12 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> <img
+															> <img
 																src="/img/book-1.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -551,19 +562,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2014
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-7580-0048-9
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -571,18 +582,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+%D0%9F%D1%80%D0%BE+%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9+%D0%B3%D0%BE%D0%B4+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+										<div data-aos="fade-up" class="repeater-list-item ">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto"
 												>
 												<div class="card-wrapper flex flex-col" >
@@ -591,12 +602,12 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> <img
+															> <img
 																src="/img/book-2.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -604,19 +615,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2011
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-9533-6045-6
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -624,18 +635,18 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+100+%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85+%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9+%D1%81%D0%B0%D0%BD%D0%BA%D1%82-%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B0+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div data-aos="fade-up" class="repeater-list-item aos-init"><!---->
+										<div data-aos="fade-up" class="repeater-list-item ">
 											<div class="card relative w-full theme-image border border-0 hover-none hover-shadow fullphoto">
 												<div class="card-wrapper flex flex-col" >
 													<div class="card-image" >
@@ -643,12 +654,12 @@
 															style="background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);opacity:0.5;"
 															></div>
 														<div class="image-wrap float-center bg-theme-default"
-															><!----> <!----> <img
+															> <img
 																src="/img/book-2.webp"
 																loading="eager"
 																class="absolute z-n1 object-cover h-full w-full"
-																> <!----> <!---->
-															<div style="display:none;" ><!----></div>
+																> 
+															
 														</div>
 													</div>
 													<div class="card-body flex-1" >
@@ -656,19 +667,19 @@
 															>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		2012
-																	</span> <!----></a></div>
+																	</span> </a></div>
 															<div class="block-button-wrap" 
 																><a target="_self"
-																	class="relative btn btn-sm " ><!---->
+																	class="relative btn btn-sm " >
 																	<span contenteditable="false" class="text"
 																		>
 																		978-5-9533-6097-5
-																	</span> <!----></a></div>
-														</div> <!----> <!----> <!---->
+																	</span> </a></div>
+														</div>  
 													</div>
 													<div class="card-footer mx-4 py-4 border-t" >
 														<div class="flex justify-between items-center" >
@@ -676,17 +687,17 @@
 																><a
 																	href="https://yandex.ru/search/?text=%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2+100+%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D1%85+%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D1%8B+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0&amp;lr=213"
 																	target="_blank" class="relative btn  btn-primary"
-																	><!----> <span contenteditable="false"
+																	> <span contenteditable="false"
 																		class="text" >
 																		Поиск
-																	</span> <!----></a></div>
-															<div class="icon-box" ><!----> <!----> <!---->
+																	</span> </a></div>
+															<div class="icon-box" > 
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div> <!----> <!---->
+										</div> 
 									</div>
 								</div>
 							</div>
@@ -694,19 +705,19 @@
 					</div>
 					<div class="flex justify-center mt-4">
 						<div class="block-button-wrap" ><a target="_blank"
-								class="relative btn btn-primary" ><!----> <span contenteditable="false"
+								class="relative btn btn-primary" > <span contenteditable="false"
 									class="text" >
 									Показать еще
-								</span> <!----></a></div>
-					</div> <!----> <!----> <!---->
+								</span> </a></div>
+					</div>  
 				</div>
 			</div>
-		</div> <!----> <!---->
+		</div> 
 	</div>
 
-	<div id="block-47" class="block panel panel-theme-inverse fe-03" ><!---->
+	<div id="block-47" class="block panel panel-theme-inverse fe-03" >
 		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" ></div>
-		<!----> <!----> <!----> <!----> <!----> <!---->
+		  
 		<div class="relative pt-16 pb-16" >
 			<div class="container" >
 				<div class="mx-auto max-w-full">
@@ -714,22 +725,22 @@
 						<div class="xl:col-span-1 text-center">
 							<div class="top-8 mb-10 sticky">
 								<div class="fs-4 font-medium mb-3  block-text js_wysiwyg_d47_t1735980627908_r47"
-									data-v-4e89a358="">
-									<p class="tt-p"><s>Интервью</s></p>
-								</div> <!---->
+									>
+									<p ><s>Интервью</s></p>
+								</div> 
 								<div class="mt-4 fs-5 text-secondary  block-text js_wysiwyg_d47_t1735980627908_r31"
-									data-v-4e89a358="">
-									<p class="tt-p">если вы хотите чего-либо достигнуть, а в этом смысл всех дел и деяний,
+									>
+									<p >если вы хотите чего-либо достигнуть, а в этом смысл всех дел и деяний,
 										то важнейшим является воля. Сегодня об этом забывают. Или заставляют забыть,
 										подменяя многие естественные понятия какими-то поведенческими формулами. А ведь за
 										этими формулами-штампами человек теряет индивидуальность и волю.</p>
-									<p class="tt-p"><br></p>
+									<p ><br></p>
 								</div>
 								<div class="panel_footer mt-8 text-center">
 									<div class="inline-flex gap-2">
-										<div class="block-button-wrap" style="display:none;" data-v-5f9e27db=""><!---->
+										<div class="block-button-wrap" style="display:none;" >
 										</div>
-										<div class="block-button-wrap" style="display:none;" data-v-5f9e27db=""><!---->
+										<div class="block-button-wrap" style="display:none;" >
 										</div>
 									</div>
 								</div>
@@ -737,255 +748,507 @@
 						</div>
 						<div class="xl:col-span-2">
 							<div class="grid gap-4 md:grid-cols-1 xl:grid-cols-1">
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-5">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627910_r74"
-														data-v-4e89a358="">
-														<p class="tt-p">ТАСС,&nbsp; 12 марта 2023</p>
+														>
+														<p >ТАСС,&nbsp; 12 марта 2023</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627910_r94"
-														data-v-4e89a358="">
-														<p class="tt-p"><a rel="noopener noreferrer nofollow"
+														>
+														<p ><a rel="noopener noreferrer nofollow"
 																href="https://harnas.clients.chimera.ink/article/pisatel-aleksandr-myasnikov-budet-novoe-vremya-i-budut-novye-lyudi/">Писатель
 																Александр Мясников: будет новое время, и будут новые
 																люди</a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627911_r88"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;01 сентября 2022</p>
+														>
+														<p >ОРТ,&nbsp;01 сентября 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627911_r59"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/aleksandr-myasnikov-esli-gosudarstvo-ne-budet-zanimatsya-vospitaniem-detej-to-vsyo-ostalnoe-bessmyslenno/">Александр
 																Мясников: Если государство не будет заниматься воспитанием
 																детей, то всё остальное бессмысленно.</a> </p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627911_r42"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;30 декабря 2022</p>
+														>
+														<p >ОРТ,&nbsp;30 декабря 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627912_r43"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/aleksandr-myasnikov-udivitelno-pochemu-ne-bylo-prazdnika-sozdaniya-sssr/">Александр
 																Мясников: «Удивительно, почему не было праздника создания
 																СССР»<strong>. </strong></a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627913_r87"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;26 ноября 2022</p>
+														>
+														<p >ОРТ,&nbsp;26 ноября 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627913_r70"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/aleksandr-myasnikov-volga-takoe-mesto-gde-mozhno-puteshestvovat-ne-tolko-v-prostranstve-no-i-vo-vremeni/">Александр
 																Мясников: Волга - такое место, где можно путешествовать не
 																только в пространстве, но и во времени </a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627914_r21"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;12 октября 2022</p>
+														>
+														<p >ОРТ,&nbsp;12 октября 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627914_r75"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/aleksandr-myasnikov-namnogo-vazhnee-vospitanie-gosudarstvennosti-a-eto-ponyatie-svyazano-s-istoriej-gosudarstva-kak-takovogo/">Александр
 																Мясников: Намного важнее воспитание государственности, а это
 																понятие связано с историей государства как такового </a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627915_r73"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;22 июня 2022</p>
+														>
+														<p >ОРТ,&nbsp;22 июня 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627915_r20"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/aleksandr-myasnikov-dvulichie-nashih-tak-nazyvaemyh-partnyorov-sovershenno-uzhasno/">Александр
 																Мясников: Двуличие наших так называемых «партнёров»
 																совершенно ужасно</a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627916_r40"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;26 сентября 2022</p>
+														>
+														<p >ОРТ,&nbsp;26 сентября 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627916_r83"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/aleksandr-myasnikov-nashu-stranu-uvazhali-tolko-togda-kogda-my-stanovilis-silnymi-i-nezavisimymi/">Нашу
 																страну уважали только тогда, когда мы становились сильными и
 																независимыми </a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627916_r32"
-														data-v-4e89a358="">
-														<p class="tt-p">ОРТ,&nbsp;09 мая 2022</p>
+														>
+														<p >ОРТ,&nbsp;09 мая 2022</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627917_r42"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/kogda-prichina-prazdnika-ponyatna-bez-obuyasnenij-on-ne-ischeznet/">Когда
 																причина праздника понятна без объяснений, он не исчезнет</a>
 														</p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
 								</div>
-								<div data-aos="slide-left" class="repeater-list-item aos-init"><!---->
+								<div data-aos="slide-left" class="repeater-list-item ">
 									<div class="relative card h-full border Card4">
 										<div class="p-4 theme-light">
 											<div class="flex gap-x-4">
-												<div class="h-full flex-shrink-0 icon-wrap" data-v-7d6c7952=""><!---->
-													<!----> <!---->
-													<div class="ic ic-video1" data-v-7d6c7952=""></div>
-													<div style="display:none;" data-v-7d6c7952=""><!----></div>
+												<div class="h-full flex-shrink-0 icon-wrap" >
+													
+													<div class="ic ic-video1" ></div>
+													
 												</div>
 												<div class="flex flex-col">
 													<div class="fs-6  block-text js_wysiwyg_d47_t1735980627917_r10"
-														data-v-4e89a358="">
-														<p class="tt-p">СОЮЗ,&nbsp; 6 мая 2018</p>
+														>
+														<p >СОЮЗ,&nbsp; 6 мая 2018</p>
 													</div>
 													<div class="fs-5  block-text js_wysiwyg_d47_t1735980627917_r72"
-														data-v-4e89a358="">
-														<p class="tt-p"><a target="_self" rel="noopener noreferrer nofollow"
+														>
+														<p ><a target="_self" rel="noopener noreferrer nofollow"
 																href="/article/cerkov-i-obshestvo-beseda-s-pisatelem-istorikom-al-myasnikovym/">Церковь
 																и общество. Беседа с писателем, историком А.Л. Мясниковым.
 															</a></p>
 													</div>
 												</div>
 											</div>
-										</div> <!---->
+										</div> 
 									</div>
-								</div> <!----> <!---->
+								</div> 
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div> <!----> <!---->
+		</div> 
 	</div>
 
 
-  
+	<div id="block-60" class="block panel panel-theme-light fo-pictures-5i">
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto"></div>
+	
+		<div class="relative pt-16 pb-20">
+			<div>
+				<div class="panel_header mb-8">
+					<div class="container">
+						<div class="mx-auto max-w-full text-center">
+							<div class="mb-4 fs-2 font-medium  block-text js_wysiwyg_d60_t1735980627921_r25">
+								<p><s>Альбом</s></p>
+							</div>
+							<div contenteditable="false"
+								class="min-width-10 min-height-10 block fs-4 font-medium mb-3  block-text"
+								>
+								Он родился в обычной советской семье: отец был техником-инженером на заводе, мать также
+								работала на производстве. В общем жили, как все.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel_body">
+					<div class="container">
+						<div class="mx-auto max-w-full">
+							<div class="gallery grid grid-cols-1 gap-6">
+								<div class="repeater-list-item">
+									<div>
+										<div class="grid-5pictures">
+											<div class="box box-1 relative">
+												<div class="relative h-full w-full image-wrap">
+													<div class="image-wrap">
+														<img src="/img/dscf9145-1.jpg" loading="lazy"
+															class="block object-cover h-full1 w-full1 w-[940px] h-[410px]"
+															data-fancybox="gallery" data-src="/img/dscf9145-1.jpg">
+													</div>
+	
+												</div>
+											</div>
+											<div class="box box-2 relative">
+												<div class="image-wrap">
+													<img src="/img/photo-2023-03-09-19-05-29_resize_w450_h450.webp"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/photo-2023-03-09-19-05-29_resize_w450_h450.webp">
+	
+												</div>
+											</div>
+											<div class="box box-3 relative">
+												<div class="image-wrap"> <img src="/img/csm-myasnikov-2-fdfb91cb77.jpg"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/csm-myasnikov-2-fdfb91cb77.jpg">
+	
+												</div>
+											</div>
+											<div class="box box-4 relative">
+												<div class="image-wrap"> <img src="/img/xn6ni2qxxla.jpg" loading="lazy"
+														class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/xn6ni2qxxla.jpg">
+	
+												</div>
+											</div>
+											<div class="box box-5 relative">
+												<div class="image-wrap"> <img
+														src="/img/csm-myasnikov-1-477e970ccf_resize_w450_h450.webp"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/csm-myasnikov-1-477e970ccf_resize_w450_h450.webp">
+	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="repeater-list-item">
+									<div>
+										<div class="grid-5pictures reverse-mode">
+											<div class="box box-1 relative">
+												<div class="relative h-full w-full image-wrap">
+	
+													<img src="/img/bg-1.jpg" loading="lazy"
+														class="block object-cover h-full w-full" data-fancybox="gallery"
+														data-src="/img/bg-1.jpg">
+	
+	
+												</div>
+											</div>
+											<div class="box box-2 relative">
+												<div class="image-wrap">
+													<img src="/img/photo-2023-03-09-19-05-34_resize_w450_h450.webp"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/photo-2023-03-09-19-05-34_resize_w450_h450.webp">
+	
+												</div>
+											</div>
+											<div class="box box-3 relative">
+												<div class="image-wrap"> <img src="/img/maxresdefault_resize_w450_h450.webp"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/maxresdefault_resize_w450_h450.webp">
+	
+												</div>
+											</div>
+											<div class="box box-4 relative">
+												<div class="image-wrap"> <img
+														src="/img/1ba05ef8-66f9-4207-9092-1bf27d400676_resize_w450_h450.webp"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/1ba05ef8-66f9-4207-9092-1bf27d400676_resize_w450_h450.webp">
+	
+												</div>
+											</div>
+											<div class="box box-5 relative">
+												<div class="image-wrap"> <img src="/img/csm-myasnikov-2-fdfb91cb77.jpg"
+														loading="lazy" class="w-[410px] h-[410px]" data-fancybox="gallery"
+														data-src="/img/csm-myasnikov-2-fdfb91cb77.jpg">
+	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  
+	<div id="block-54" class="block panel panel-theme-default panel-theme-light fb-02" >
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-cover"
+			style="background-image:url(/img/map-overview_resize_w2500_h.webp);"
+			></div>      
+		<div class="relative pt-16 pb-16" >
+			<div class="container py-6 flex md:flex-nowrap flex-wrap"  >
+				<div class="contacts-image-container w-full md:w-1/2 xl:w-2/3 bg-gray-300 bg-opacity-80 md:mr-10 p-10 flex items-end justify-start relative"
+					>
+					<div class="contacts-image-back image-wrap rounded-lg"  >
+						 <img
+							src="/img/csm-myasnikov-2-fdfb91cb77.jpg"
+							loading="lazy" class="object-cover w-full h-full rounded-lg" >  
+						<div style="display:none;" ></div>
+					</div>
+					<div class="fragment-area direction-ltr relative w-full shadow-md" 
+						>
+						<div class="inner-wrap flex flex-wrap w-full" >
+							<div class="w-full xl:w-1/2 xl:pr-4 xl:pl-0"  ></div>
+							<div class="w-full xl:w-1/2 xl:pl-4 mt-4 xl:mt-0"  >
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div class="xl:w-1/3 md:w-1/2 theme-white flex flex-col md:ml-auto w-full px-6 py-8 mt-8 md:mt-0 shadow-md"
+					>
+					<h2 contenteditable="false"
+						class="min-width-10 min-height-10 text-2xl leading-5 font-medium mb-2  block-text"
+						>
+						Написать письмо
+					</h2> 
+					<div class="fs-6  block-text js_wysiwyg_d54_t1736014654471_r35" >
+						<p class="tt-p">Вы можете написать свой вопрос или предложение. Мы постараемся ответить вам в
+							ближайшее время</p>
+					</div>
+					<form name="feedbackFrom" class="mt-6" ><input type="hidden" name="user_answers"
+							value="[]" >
+						<div class="grid grid-cols-1 gap-y-4" >
+							<div class="repeater-list-item">
+								<div  >
+									<div ><label  for="email" class="sr-only"></label>
+										<input  id="email" name="email" placeholder="Ваш email"
+											type="email" class="form-control block w-full">  <span 
+											class="validate-error"></span></div>
+								</div>
+							</div>
+							<div class="repeater-list-item">
+								<div  >
+									<div ><label  for="Vopos_ili_commentarii"
+											class="sr-only"></label>  <textarea 
+											id="Vopos_ili_commentarii" name="Vopos_ili_commentarii" type="text"
+											placeholder="Ваш вопрос" class="form-control block w-full"></textarea> <span
+											 class="validate-error"></span></div>
+								</div>
+							</div>  
+						</div>
+						<div class="mt-3" ><input type="checkbox" name="user-agreement"
+								> <label for="user-agreement" >Я согласен с
+								пользовательским соглашением и политикой по обработке персональных данных</label></div>
+						<div class="mt-6" ><button type="button" disabled="disabled"
+								class="inline-flex items-center btn btn-primary" >
+								Отправить
+							</button></div>
+					</form> 
+				</div>
+			</div>
+		</div>  
+	</div>
 
+	<div id="block-56" class="block panel panel-theme-inverse pft-01" >
+		<div class="panel_background-image absolute inset-0 z-0 bg-no-repeat bg-center bg-auto" ></div>
+		     
+		<div class="relative pt-8 pb-8" >
+			<div class="container" >
+				<section class="relative">
+					<div class="mx-auto max-w-full">
+						<div class="text-center">
+							<div class="sidebar-menu inline-flex flex-wrap gap-x-8 justify-center">
+								<div class="repeater-list-item">
+									<div class="block-button-wrap active" ><a href="/src/" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Главная
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/biografiya.html" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Биография
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/index.html#block-43" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Книги
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/index.html#block-60" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Альбом
+											</span> </a></div>
+								</div>
+								<div class="repeater-list-item">
+									<div class="block-button-wrap" ><a href="/src/index.html#block-47" target="_self"
+											class="relative menu-link" > <span
+												contenteditable="false" class="text" >
+												Интервью
+											</span> </a></div>
+								</div>  
+							</div>
+							<div class="flex   m-0 box-border text-lg gap-x-4 leading-4 mb-6 justify-center"> 
+								 </div>
+							<div class="copyright-year flex fs-5 items-end m-0 box-border mb-3 justify-center">
+								© &nbsp;
+								<div class="fs-5 text-secondary  block-text js_wysiwyg_d56_t1736014654399_r90"
+									>
+									<p class="tt-p">Александр Мясников</p>
+								</div>
+							</div>
+							<div class="copyright text-secondary justify-center">
+								© работает на движке <a href="https://www.chimera.ink/" target="_blank">chimera.ink</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>  
+	</div>
 
 </body>
+
 
 
 
